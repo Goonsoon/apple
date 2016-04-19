@@ -1,0 +1,442 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+::selection{
+    background: none!important;
+}
+@font-face {font-family: "iconfont";
+    src: url('./font/iconfont.eot'); /* IE9*/
+    src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./font/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('./font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('./font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before { content: "\e648"; }
+
+.disableScroll{
+    overflow: hidden;
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.header{
+    transition: all .3s ease;
+    color: white;
+    background: rgb(0,0,0);
+    height: 44px;
+    line-height: 44px;
+}
+.header *:active , .header *:hover{
+    background-color: rgb(0,0,0)!important;
+}
+
+.header .header-con{
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.header .row li{
+    transition: all .3s ease;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 44px;
+}
+.header .row li:hover{
+    opacity: 0.5;
+}
+.header .menu{
+    float: left;
+    font-family: 'Microsoft YaHei UI Light';
+    text-align: left;
+    text-indent: 15px;
+    font-size: 20px;
+    line-height: 40px;
+    width: 35px;
+    overflow: hidden;
+}
+.header-mobi .cart{
+    background-position: 90%!important;
+}
+
+.header .logo{
+    background-image: url('../images/nav/logo.svg');
+}
+.header .mac{
+    background-image: url('../images/nav/mac.svg');
+}
+.header .ipad{
+    background-image: url('../images/nav/ipad.svg');
+}
+.header .iphone{
+    background-image: url('../images/nav/iphone.svg');
+}
+.header .watch{
+    background-image: url('../images/nav/watch.svg');
+}
+.header .music{
+    background-image: url('../images/nav/music.svg');
+}
+.header .support{
+    background-image: url('../images/nav/support.svg');
+}
+.header .search{
+    background-image: url('../images/nav/search.svg');
+}
+.header .cart{
+    background-image: url('../images/nav/bag.svg');
+}
+.header-mobi .submenu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgb(0,0,0);
+}
+.submenu li{
+    transition: all .3s ease;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 50px;
+    height: 50px;
+    width: 85%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.submenu li:hover{
+    border-color: rgba(255,255,255,.5);
+    opacity: 0.5;
+}
+.submenu #search{
+    background: black;
+    color: white!important;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    font-size: 18px;
+    margin: 5px 0;
+}
+.submenu #search:focus{
+    outline: none!important;
+}
+.banner{
+    position: relative;
+    overflow: hidden;
+    font-family: 'Microsoft YaHei UI Light';
+    width: 100%;
+}
+.banner-content{
+    /*transition: all 0.8s ease;*/
+    width: 400%;
+    height: 100%;
+}
+.banner-content:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.banner .banner-content li{
+    cursor: pointer;
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.banner .dot{
+    position: absolute;
+    bottom: 10px;
+    width: 130px;
+    height: 25px;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.dot li{
+    cursor: pointer;
+    font-size: 0;
+    vertical-align: middle;
+    margin: 0 10px;
+    width:8px;
+    height: 8px;
+    background: #888;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot li:hover{
+    background: #666;
+}
+.dot li.sel{
+    cursor: default;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0);
+    border: 1px solid dodgerblue;
+}
+.banner-content li{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media screen and (max-width: 760px){
+    body{
+        min-width: 320px;
+    }
+    .banner{
+        height: 450px;
+    }
+    .banner .banner-content li{
+        background-size: 500px auto;
+        padding-top: 35px;
+    }
+    .banner1{
+        background-size: 650px auto!important;
+        background-position-y:100px!important;
+        background: url("../images/banner1_small.png");
+    }
+    .banner2{
+        background-position-y: 120px!important;
+        background: url("../images/banner2_small.png");
+    }
+    .banner3{
+        background-position-y: 200px!important;
+        background: url("../images/banner3_small.png");
+    }
+    .banner4{
+        background-position-y: 220px!important;
+        background: url("../images/banner4_small.png");
+    }
+    .banner h1{
+        font-family: 'Microsoft YaHei UI';
+        font-weight: normal;
+        text-align: center;
+        font-size: 28px;
+        padding:0;
+        margin:0;
+    }
+    .banner h2{
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+    .banner h3{
+        font-size: 14px;
+        text-align: center;
+        font-weight: normal;
+        margin: 5px 0;
+    }
+}
+@media screen and (min-width: 760px){
+    .banner{
+        height: 720px;
+    }
+    .banner .banner-content li{
+        padding-top: 55px;
+        background-size: 1200px auto;
+    }
+    .banner1{
+        background-size: auto 100%!important;
+        background-position-y: -30px!important;
+        background: url("../images/banner1_mid.png");
+    }
+    .banner2{
+        background-position-y: 100px!important;
+        background: url("../images/banner2_mid.png");
+    }
+    .banner3{
+        background-position-y: 270px!important;
+        background: url("../images/banner3_mid.png");
+    }
+    .banner4{
+        background-position-y: 290px!important;
+        background: url("../images/banner4_mid.png");
+    }
+    .banner h1{
+        text-align: center;
+        font-size: 50px;
+        margin: 0;
+        padding:0;
+    }
+    .banner h2{
+        text-align: center;
+        font-weight: normal;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .banner h3{
+        margin: 10px 0;
+        font-size: 15px;
+        text-align: center;
+        font-weight: normal;
+    }
+}
+@media screen and (min-width: 1024px){
+    .banner1{
+        background: url("../images/banner1_large.png");
+    }
+    .banner2{
+        background: url("../images/banner2_large.png");
+    }
+    .banner3{
+        background: url("../images/banner3_large.png");
+    }
+    .banner4{
+        background: url("../images/banner4_large.png");
+    }
+    .banner h1{
+        text-align: center;
+        font-size: 55px;
+        margin: 0;
+        padding:0;
+    }
+    .banner h2{
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
+    .banner h3{
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        font-weight: normal;
+    }
+}
+.pic{
+    cursor: pointer;
+    border: 1px solid white;
+    height: 200px;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+.pic1{
+    background: url('../images/1-736.jpg');
+}
+.pic2{
+    background: url('../images/2-736.jpg');
+}
+.pic3{
+    background: url('../images/3-736.jpg');
+}
+.pic4{
+    background: url('../images/4-736.jpg');
+}
+
+.footer-pc{
+    margin-top: 1px;
+    width: 100%;
+    height: auto;
+    background: rgb(242,242,242);
+    padding-bottom: 20px;
+}
+.footer-pc .inner .col{
+    float: left;
+}
+.copyright{
+    margin-top: 20px!important;
+    font-size: 10px;
+    color: #888;
+    line-height: 20px;
+
+}
+@media screen and (min-width: 736px){
+    .footer-pc .inner{
+        width: 90%;
+        margin: 0 5%;
+    }
+    .footer-pc .inner:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .footer-pc .inner .col{
+        width: 20%;
+    }
+    .col ul{
+        margin: 20px 0;
+    }
+    .col ul li.title{
+        font-family: 'Microsoft YaHei UI Light';
+        margin-bottom: 5px;
+        color:#222;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .col ul li:not(.title){
+        font-family: 'Microsoft YaHei UI Light';
+        color: #555;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .col ul li:not(.title):hover{
+        text-decoration: underline;
+        color: #222222;
+    }
+}
+@media screen and (min-width: 1024px){
+    .footer-pc .inner{
+        width: 980px;
+        margin: 0 auto;
+    }
+    .footer-pc .inner .col{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .footer-mobi{
+        margin-top: 1px;
+        width: 100%;
+        background: rgb(242,242,242);
+        padding-bottom: 20px;
+    }
+    .footer-mobi .inner{
+        width: 90%;
+        margin: 0 5%;
+    }
+    .footer-mobi .menulist{
+        font-family: 'Microsoft YaHei UI Light';
+        font-weight: bold;
+        cursor: pointer;
+        color: #555;
+        font-size: 12px;
+        height: auto;
+        line-height: 50px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    .footer-mobi .menulist span{
+        display: block;
+    }
+    .footer-mobi .menulist ul{
+        display: none;
+    }
+    .footer-mobi .menulist li{
+        font-family: 'Microsoft YaHei UI';
+        font-weight: normal;
+        text-indent: 15px;
+        font-size: 10px;
+        line-height: 30px;
+    }
+    .footer-mobi .menulist li:hover{
+        text-decoration: underline;
+        color: #222222;
+    }
+}
